@@ -40,16 +40,15 @@ define(
             }
 
             function publish(type, publication) {
-                this.visitSubscribers('publish', type, publication);
+                visitSubscribers.call(this, 'publish', type, publication);
             }
 
             function unsubscribe(type, fn) {
-                this.visitSubscribers('unsubscribe', type, fn);
+                visitSubscribers.call(this, 'unsubscribe', type, fn);
             }
 
             return function() {
                 this.subscribers = [];
-                this.visitSubscribers = visitSubscribers;
                 this.publish = publish;
                 this.subscribe = subscribe;
                 this.unsubscribe = unsubscribe;

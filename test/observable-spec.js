@@ -12,19 +12,19 @@
 			it("adds publish to obj", function() {
 				sut.makeObservable(obj);
 
-				expect(typeof(obj.visitSubscribers)).toBe(typeof(Function));
+				expect(typeof(obj.publish)).toBe(typeof(Function));
 			});
 
 			it("adds subscribe to obj", function() {
 				sut.makeObservable(obj);
 
-				expect(typeof(obj.visitSubscribers)).toBe(typeof(Function));
+				expect(typeof(obj.subscribe)).toBe(typeof(Function));
 			});
 
 			it("adds unsubscribe to obj", function() {
 				sut.makeObservable(obj);
 
-				expect(typeof(obj.visitSubscribers)).toBe(typeof(Function));
+				expect(typeof(obj.unsubscribe)).toBe(typeof(Function));
 			});
 
 			it("adds subscribers object", function() {
